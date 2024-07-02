@@ -29,13 +29,13 @@ fonts = cv2.FONT_HERSHEY_COMPLEX
 
 # Load class names
 classNames = []
-classFile = r'D:\object-identifier-and-camera-to-object-and-object-to-object-distance-estimator-main\object detect\coco.names'
+classFile ='coco.names'
 with open(classFile, 'rt') as f:
     classNames = f.read().rstrip('\n').split('\n')
 
 # Load configuration and weights
-configPath = r'D:\object-identifier-and-camera-to-object-and-object-to-object-distance-estimator-main\object detect\ssd_mobilenet_v3_large_coco_2020_01_14.pbtxt'
-weightsPath = r'D:\object-identifier-and-camera-to-object-and-object-to-object-distance-estimator-main\object detect\frozen_inference_graph.pb'
+configPath = 'ssd_mobilenet_v3_large_coco_2020_01_14.pbtxt'
+weightsPath = 'frozen_inference_graph.pb'
 
 # Set up the network
 net = cv2.dnn_DetectionModel(weightsPath, configPath)
@@ -51,7 +51,7 @@ cap.set(4, 720)  # Set height
 cap.set(10, 70)  # Set brightness
 
 # Face detector setup
-face_detector = cv2.CascadeClassifier(r'D:\object-identifier-and-camera-to-object-and-object-to-object-distance-estimator-main\object detect\haarcascade_frontalface_default.xml')
+face_detector = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 
 # Focal length calculation
 def FocalLength(measured_distance, real_width, width_in_rf_image):
@@ -77,7 +77,7 @@ def face_data(image, CallOut, Distance_level):
     return face_width, faces, face_center_x, face_center_y
 
 # Reading reference image for focal length calculation
-ref_image_path = r'D:\object-identifier-and-camera-to-object-and-object-to-object-distance-estimator-main\object detect\lena.png'
+ref_image_path = 'lena.png'
 ref_image = cv2.imread(ref_image_path)
 if ref_image is None:
     print(f"Error: Unable to load reference image at {ref_image_path}")
