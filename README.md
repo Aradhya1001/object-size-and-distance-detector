@@ -13,9 +13,12 @@
 7)Open the cloned repository with Jupyter Notebook/Visual Studio Code/PyCharm.
 
 8)Install all the python packages (numpy, scipy, opencv-python) in your Jupyter Notebook/Visual Studio Code/PyCharm.
+
 9)Commands for installing packages:
            !pip install opencv-python
            !pip install scipy
            !pip install numpy
+
 10)After installing the packages restart the kernel.
+
 11)Click on the object_detector.py and run the code to see the output.
