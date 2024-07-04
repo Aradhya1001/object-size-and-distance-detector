@@ -6,7 +6,7 @@
 
 4)Open the command prompt or git bash in your system.
 
-5)Type this command: git clone and paste the <URL> and hit enter.
+5)Type this command: git clone and paste the URL and hit enter.
 
 6)Now you will be able to see the repository getting cloned in to your system.
 
